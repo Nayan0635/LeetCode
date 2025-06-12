@@ -1,4 +1,4 @@
-// find Max and Min element with minimum no of comparison then remove
+// removing maximun and minimum from array
 //#include<bits/stdc++.h>
 #include<iostream>
 #include<vector>
@@ -9,20 +9,15 @@ class Solution{
     int minimumDeletions(vector<int> &nums){
         int maxi = 0, mini = 0;
         for (int i = 1; i < nums.size(); i++){
+            if (nums.size() <= 1)   return 1;
             //get maxi and mini index
             if (nums[i] > nums[maxi]) maxi = i;
             if (nums[i] < nums[mini]) mini = i;
         }
-        //remove higher index first to avoid shifting issue
-        if (maxi > mini){
-            nums.erase(nums.begin() + maxi);
-            nums.erase(nums.begin() + mini);
-        }
-        else{
-            nums.erase(nums.begin() + mini);
-            nums.erase(nums.begin() + maxi);
-        }
-        return nums.size();
+        
+        int front = min(maxi,mini) + 1;
+        int back = nums.size() - max(maxi, mini);
+        return front+back;
     }
 };
 int main(){
