@@ -1,2 +1,6 @@
 # LeetCode
-[1. maximum and minimum element with minimum no of comparison](https://leetcode.com/problems/removing-minimum-and-maximum-from-array/)
+
+## Problem Links
+
+[1. removing-minimum-and-maximum-from-array](https://leetcode.com/problems/removing-minimum-and-maximum-from-array/)
+[2. sort-colors](https://leetcode.com/problems/sort-colors/)
